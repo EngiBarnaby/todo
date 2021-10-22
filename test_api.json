@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "3923cbef-7471-4a27-a4e7-5544cb1bc6e5",
+		"name": "test_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "login/register",
+					"item": [
+						{
+							"name": "registration",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\": \"qwerty123456\",\n    \"username\": \"test-user\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "dev1.itpw.ru:8003/accounts/authentication/reg/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"accounts",
+										"authentication",
+										"reg",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "authentication",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\": \"qwerty123456\",\n    \"username\": \"test-user\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "dev1.itpw.ru:8003/accounts/authentication/auth/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"accounts",
+										"authentication",
+										"auth",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "dev1.itpw.ru:8003/accounts/profile/my_profile/",
+							"host": [
+								"dev1",
+								"itpw",
+								"ru"
+							],
+							"port": "8003",
+							"path": [
+								"accounts",
+								"profile",
+								"my_profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lists",
+			"item": [
+				{
+					"name": "lists",
+					"item": [
+						{
+							"name": "create_list",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"my_second_list\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "dev1.itpw.ru:8003/todo/lists/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"todo",
+										"lists",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_list",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"my_updated_list\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "dev1.itpw.ru:8003/todo/lists/1/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"todo",
+										"lists",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list_lists",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "dev1.itpw.ru:8003/todo/lists/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"todo",
+										"lists",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_list",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "dev1.itpw.ru:8003/todo/lists/1/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"todo",
+										"lists",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tasks",
+					"item": [
+						{
+							"name": "create_task",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"todo_list\": 2,\n    \"name\": \"my second task\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "dev1.itpw.ru:8003/todo/tasks/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"todo",
+										"tasks",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_task",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"todo_list\": 2,\n    \"name\": \"my first updated task\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "dev1.itpw.ru:8003/todo/tasks/1/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"todo",
+										"tasks",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list_tasks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "dev1.itpw.ru:8003/todo/tasks/?todo_list=2",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"todo",
+										"tasks",
+										""
+									],
+									"query": [
+										{
+											"key": "todo_list",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_task",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "dev1.itpw.ru:8003/todo/tasks/1/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"todo",
+										"tasks",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "complete_task",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "dev1.itpw.ru:8003/todo/tasks/complete/2/",
+									"host": [
+										"dev1",
+										"itpw",
+										"ru"
+									],
+									"port": "8003",
+									"path": [
+										"todo",
+										"tasks",
+										"complete",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNjBlZGQ1ZjctMDQ1NC00OTc3LTg5NGEtZGMwNjIwMTM4ZGE1IiwidXNlcm5hbWUiOiJ0ZXN0LXVzZXIiLCJleHAiOjE2MzQ4MTI2NjN9.rpEOG8kHqNZoAhDUvFhfU329FpCZV7DMSAYzRVvprDA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
